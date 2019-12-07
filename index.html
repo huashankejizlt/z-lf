@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        border: thistle solid 1px;
+        height: 100px;
+        width: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p style="display: none;">相声</p>
+        <div id="box1">狗子</div>
+    </div>
+</body>
+<script>
+window.onload = function(){
+  let abc =  document.getElementsByClassName("box")[0]
+//   console.log(abc)
+  let p1 = document.getElementsByTagName("p")[0]
+  p1.style.fontSize = "50px"
+//   console.log(p1)
+  let p2 = document.getElementById("box1")
+  p2.onclick = function(){
+      p1.style.display = "block"
+  }
+}
+</script>
+</html>
