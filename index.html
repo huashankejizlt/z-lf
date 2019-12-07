@@ -6,30 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    .box{
-        border: thistle solid 1px;
-        height: 100px;
-        width: 100px;
-    }
+   div{
+       height: 100px;
+       width: 100px;
+       border: solid 1px red;
+   }
+   #box{
+       background: blue;
+   }
     </style>
 </head>
 <body>
-    <div class="box">
-        <p style="display: none;">相声</p>
-        <div id="box1">狗子</div>
-    </div>
+    <div id="box">1</div>
+    <div id="box1">2</div>
+    <div id="box2">3</div>
 </body>
 <script>
-window.onload = function(){
-  let abc =  document.getElementsByClassName("box")[0]
-//   console.log(abc)
-  let p1 = document.getElementsByTagName("p")[0]
-  p1.style.fontSize = "50px"
-//   console.log(p1)
-  let p2 = document.getElementById("box1")
-  p2.onclick = function(){
-      p1.style.display = "block"
-  }
-}
+   let arr =  document.getElementsByTagName("div")
+//    console.log(arr)
+   for(let i=0;i<arr.length;i++){
+      arr[i].onclick = function(){
+          for(let j=0;j<arr.length;j++){
+              if(i == j){
+                  arr[j].style.background = "blue"
+              }else{
+                  arr[j].style.background = "#ffffff"
+              }
+          }
+      }
+   }
 </script>
 </html>
